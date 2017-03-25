@@ -31,7 +31,8 @@ module Hanamaru
       g.test_framework :rspec,
         fixture: true,
         controller_specs: true,
-        request_specs: true
+        request_specs: true,
+        routing_specs: false
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
   end
