@@ -11,3 +11,6 @@ require 'factory_girl'
 Dir[Rails.root.join('spec/factories/**/*.rb')].each { |f| require f }
 
 Rake::Task["db:migrate:reset"].invoke
+
+Item.create(title: "item1", url: "url1", archived: false, tag_list: "a,b,c")
+Item.create(title: "item2", url: "url2", archived: false, tag_list: "a,b,c")
