@@ -5,12 +5,12 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
 
-    render json: @items.map(&:build_hash)
+    render json: @items
   end
 
   # GET /items/1
   def show
-    render json: @item.build_hash
+    render json: @item
   end
 
   # POST /items
