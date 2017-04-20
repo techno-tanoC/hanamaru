@@ -1,12 +1,16 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
   entry: './app',
   output: {
     filename: '[name].js',
-    publicPath: 'http://localhost:4000',
+    publicPath: '/',
   },
+  plugins: [
+    new HtmlWebpackPlugin({template: 'app/index.html'})
+  ],
   module: {
     loaders: [{
       test: /\.js$/,
